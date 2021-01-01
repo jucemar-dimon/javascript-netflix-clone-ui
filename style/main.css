@@ -3,6 +3,7 @@
   --preto: #141414;
   --buttonMenu: #aaa;
   --buttonMenuHover: #fff;
+  --navItemButton: #e5e5e5;
 }
 
 * {
@@ -11,9 +12,12 @@
   box-sizing: border-box;
 }
 
+/* elementos base */
+
 body {
   background: var(--preto);
   font-family: "Times New Roman", Times, serif;
+  color: white;
 }
 
 header .container {
@@ -31,11 +35,90 @@ header .logo {
 }
 
 header nav a {
+  font-family: sans-serif;
   text-decoration: none;
-  color: var(--buttonMenu);
+  color: var(--navItemButton);
   margin-right: 10px;
+  font-size: 14px;
 }
 
 header nav a:hover {
   color: var(--buttonMenuHover);
+}
+
+.menu-bar {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.menu-direito a i {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.menu-direito .menu-esquerdo {
+  flex: 1;
+}
+
+.menu-direito a:hover {
+}
+
+/* filme principal */
+.filme-principal {
+  font-size: 16px;
+  background: linear-gradient(var(--preto), rgba(0, 0, 0, 0.2) 100%),
+    url("/images/capa-mr-robot.jpg");
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .descricao {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.filme-principal .titulo {
+  font-size: 40px;
+  font-family: "Trebuchet MS";
+  margin-top: 15%;
+}
+
+.botao {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.botao:hover {
+  background-color: white;
+  border: none;
+  color: var(--preto);
+}
+
+.botao i {
+  margin-right: 5px;
+}
+
+.filme-principal .container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+.carrosel-filmes {
+  margin-top: 10px;
 }
